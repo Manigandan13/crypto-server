@@ -5,6 +5,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/trading-plateform-0.0.1-SNAPSHOT.jar .
+COPY --from=build /app/target/treading-plateform-0.0.1-SNAPSHOT.jar .
 EXPOSE 5454
-ENTRYPOINT ["java", "-jar","/app/trading-plateform-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar","/app/treading-plateform-0.0.1-SNAPSHOT.jar"]
