@@ -72,7 +72,6 @@ public class PaymentServiceImpl implements PaymentService{
                 String status = payment.get("status");
                 if(status.equals("captured")){
                     paymentOrder.setStatus(PaymentOrderStatus.SUCCESS);
-
                     return true;
                 }
                 paymentOrder.setStatus(PaymentOrderStatus.FAILED);
@@ -122,7 +121,7 @@ public class PaymentServiceImpl implements PaymentService{
             paymentLinkRequest.put("reminder_enable",true);
 
             // Set the callback URL and method
-            paymentLinkRequest.put("callback_url",frontendUrl+"/wallet/"+orderId);
+            paymentLinkRequest.put("callback_url",frontendUrl);
             paymentLinkRequest.put("callback_method","get");
 
             // Create the payment link using the paymentLink.create() method
