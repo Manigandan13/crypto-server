@@ -31,6 +31,7 @@ public class WalleteServiceImplementation implements WalletService {
     public Wallet genrateWallete(User user) {
         Wallet wallet=new Wallet();
         wallet.setUser(user);
+        wallet.setBalance(10000);
         return walletRepository.save(wallet);
     }
 
