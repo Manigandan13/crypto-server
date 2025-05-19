@@ -95,7 +95,7 @@ public class AppConfig {
 	                    frontendUrl,
 						"http://localhost:5174",
 	                    "http://localhost:4200",
-							"https://zosh-treading.vercel.app"
+							"https://abitrade.netlify.app"
 	                ));
 	                cfg.setAllowedMethods(Collections.singletonList("*"));
 	                cfg.setAllowCredentials(true);
